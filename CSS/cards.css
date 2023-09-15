@@ -1,0 +1,74 @@
+.card {
+    position: relative;
+    margin: 5em;
+    width: 18em;
+    height: 18em;
+    background-color: #ffffff;
+    border-radius: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    perspective: 30em;
+    box-shadow: 0 0 0 1em rgb(255, 255, 255);
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+.cards_imagem{
+  width: 18em;
+}
+
+  .card svg {
+    width: 2em;
+    fill: #333;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 1em 16em rgba(255, 255, 255, 0.2);
+  }
+  
+  .card__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1em;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    transform: rotateX(-90deg);
+    transform-origin: bottom;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .card:hover .card__content {
+    transform: rotateX(0deg);
+  }
+  
+  .card__title {
+    margin: 1em;
+    font-size: 2em;
+    color: #333;
+    font-weight: 1em;
+  }
+  
+  .card:hover svg {
+    scale: 0;
+  }
+  
+  .card__description {
+    margin: 1em 0 0;
+    font-size: 1em;
+    color: #777;
+    line-height: 1em;
+  }
+  
+  .todos_cards{
+    
+    margin-top: 15%;
+    margin-left: 0%;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+  }
